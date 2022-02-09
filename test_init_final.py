@@ -492,7 +492,7 @@ async def task():
 					if basicSetting[3] != '0':
 						if fixed_bossFlag0[i] == False:
 							fixed_bossFlag0[i] = True
-							await client.get_channel(channel).send("```" + fixed_bossData[i][11] + ' ' + basicSetting[3] + 'minutes' + fixed_bossData[i][3] +'[' +  fixed_bossTime[i].strftime('%H:%M') + ']```', tts=False)
+							await client.get_channel(channel).send("```" + fixed_bossData[i][11] + ' ' + basicSetting[3] + ' minutes' + fixed_bossData[i][3] +'[' +  fixed_bossTime[i].strftime('%H:%M') + ']```', tts=False)
 							#voice:await PlaySound(voice_client1, './sound/' + fixed_bossData[i][0] + '알림1.mp3')
 
 				################ before_alert ################
@@ -500,10 +500,10 @@ async def task():
 					if basicSetting[1] != '0' :
 						if fixed_bossFlag[i] == False:
 							fixed_bossFlag[i] = True
-							await client.get_channel(channel).send("```" + fixed_bossData[i][11] + ' ' + basicSetting[1] + 'minutes' + fixed_bossData[i][3] +'[' +  fixed_bossTime[i].strftime('%H:%M') + ']```', tts=False)
+							await client.get_channel(channel).send("```" + fixed_bossData[i][11] + ' ' + basicSetting[1] + ' minutes' + fixed_bossData[i][3] +'[' +  fixed_bossTime[i].strftime('%H:%M') + ']```', tts=False)
 							# @everyone 전체공지
 							if int(fixed_bossData[i][10]) == 1 :
-								await client.get_channel(channel).send("@everyone " + fixed_bossData[i][11] + ' ' + basicSetting[1] + 'minutes !', tts=False)
+								await client.get_channel(channel).send("@everyone " + fixed_bossData[i][11] + ' ' + basicSetting[1] + ' minutes !', tts=False)
 							#voice:await PlaySound(voice_client1, './sound/' + fixed_bossData[i][0] + '알림.mp3')
 
 				################ 보스 젠 시간 확인 ################
@@ -534,9 +534,9 @@ async def task():
 								prefixStirng = '[未] '
 							# 보스 메모 유무
 							if bossData[i][6] != '' :
-								await client.get_channel(channel).send("```" + prefixStirng + bossData[i][8] + ' ' + basicSetting[3] + 'minutes' + bossData[i][3] + "[" +  bossTimeString[i] + "]" + '\n<' + bossData[i][6] + '>```', tts=False)
+								await client.get_channel(channel).send("```" + prefixStirng + bossData[i][8] + ' ' + basicSetting[3] + ' minutes' + bossData[i][3] + "[" +  bossTimeString[i] + "]" + '\n<' + bossData[i][6] + '>```', tts=False)
 							else :
-								await client.get_channel(channel).send("```" + prefixStirng + bossData[i][8] + ' ' + basicSetting[3] + 'minutes' + bossData[i][3] + "[" +  bossTimeString[i] + "]```", tts=False)
+								await client.get_channel(channel).send("```" + prefixStirng + bossData[i][8] + ' ' + basicSetting[3] + ' minutes' + bossData[i][3] + "[" +  bossTimeString[i] + "]```", tts=False)
 							#voice:await PlaySound(voice_client1, './sound/' + bossData[i][0] + '알림1.mp3')
 
 				################ before_alert ################
@@ -550,12 +550,12 @@ async def task():
 								prefixStirng = '[未] '
 							# 보스 메모 유무
 							if bossData[i][6] != '' :
-								await client.get_channel(channel).send("```" + prefixStirng + bossData[i][8] + ' ' + basicSetting[1] + 'minutes' + bossData[i][3] + "[" +  bossTimeString[i] + "]" + '\n<' + bossData[i][6] + '>```', tts=False)
+								await client.get_channel(channel).send("```" + prefixStirng + bossData[i][8] + ' ' + basicSetting[1] + ' minutes' + bossData[i][3] + "[" +  bossTimeString[i] + "]" + '\n<' + bossData[i][6] + '>```', tts=False)
 							else :
-								await client.get_channel(channel).send("```" + prefixStirng + bossData[i][8] + ' ' + basicSetting[1] + 'minutes' + bossData[i][3] + "[" +  bossTimeString[i] + "]```", tts=False)
+								await client.get_channel(channel).send("```" + prefixStirng + bossData[i][8] + ' ' + basicSetting[1] + ' minutes' + bossData[i][3] + "[" +  bossTimeString[i] + "]```", tts=False)
 							# @everyone 전체공지
 							if int(bossData[i][7]) == 1 :
-								await client.get_channel(channel).send("@everyone " + prefixStirng + bossData[i][8] + ' ' + basicSetting[1] + 'minutes !', tts=False)
+								await client.get_channel(channel).send("@everyone " + prefixStirng + bossData[i][8] + ' ' + basicSetting[1] + ' minutes !', tts=False)
 							#voice:await PlaySound(voice_client1, './sound/' + bossData[i][0] + '알림.mp3')
 
 				################ 보스 젠 시간 확인 ################
