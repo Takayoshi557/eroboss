@@ -1915,12 +1915,12 @@ while True:
 					tmp_boss_information[0] = '``` ```'
 
 				embed = discord.Embed(
-						title = "----- ボス湧き情報 -----",
+						title = "----- BOSS TIME INFO. -----",
 						description= boss_information[0],
 						color=0x0000ff
 						)
 				embed.add_field(
-						name="----- 確認されていないボス -----",
+						name="----- UNCONFIRMED INFO. -----",
 						value= tmp_boss_information[0],
 						inline = False
 						)
@@ -1933,7 +1933,7 @@ while True:
 					boss_information[0] = '``` ```'
 
 				embed = discord.Embed(
-						title = "----- ボス湧き情報 -----",
+						title = "----- BOSS TIME INFO. -----",
 						description= boss_information[0],
 						color=0x0000ff
 						)
@@ -1960,7 +1960,7 @@ while True:
 					tmp_boss_information[0] = '``` ```'
 
 				embed = discord.Embed(
-					title = "----- 確認されていないボス -----",
+					title = "----- UNCONFIRMED INFO. -----",
 					description= tmp_boss_information[0],
 					color=0x0000ff
 					)
@@ -2765,7 +2765,7 @@ while True:
 						tmp_bossTimeString[i] = bossTimeString[i] = nextTime.strftime('%H:%M:%S')
 						tmp_bossDateString[i] = bossDateString[i] = nextTime.strftime('%Y-%m-%d')
 						embed = discord.Embed(
-								description= '```次、' + bossData[i][0] + 'の湧き時間は ' + bossTimeString[i] + ' です。```',
+								description= '```Next  ' + bossData[i][0] + ' appeare time is ' + bossTimeString[i] + ' .```',
 								color=0xff0000
 								)
 						await client.get_channel(channel).send(embed=embed, tts=False)
@@ -2774,7 +2774,7 @@ while True:
 					if message.content.startswith(bossData[i][0] +'pass'):
 						################ 미입력 보스 ################
 						if bossData[i][2] == '0' :
-							await client.get_channel(channel).send('```' + bossData[i][0] + 'は確定湧きボスです。```', tts=False)
+							await client.get_channel(channel).send('```' + bossData[i][0] + 'is fixed boss.```', tts=False)
 						################ 멍 보스 ################
 						else :
 							if hello.find('  ') != -1 :
@@ -2820,7 +2820,7 @@ while True:
 								tmp_bossTimeString[i] = bossTimeString[i] = temptime.strftime('%H:%M:%S')
 								tmp_bossDateString[i] = bossDateString[i] = temptime.strftime('%Y-%m-%d')
 								embed = discord.Embed(
-										description= '```次、' + bossData[i][0] + 'の湧き時間は ' + bossTimeString[i] + ' です。```',
+										description= '```Next ' + bossData[i][0] + ' appeare time is ' + bossTimeString[i] + ' .```',
 										color=0xff0000
 										)
 								await client.get_channel(channel).send(embed=embed, tts=False)
@@ -2840,7 +2840,7 @@ while True:
 									tmp_bossTimeString[i] = bossTimeString[i] = nextTime.strftime('%H:%M:%S')
 									tmp_bossDateString[i] = bossDateString[i] = nextTime.strftime('%Y-%m-%d')
 									embed = discord.Embed(
-											description= '```次、' + bossData[i][0] + 'の湧き時間は ' + bossTimeString[i] + ' です。```',
+											description= '```Next ' + bossData[i][0] + ' appeare time is ' + bossTimeString[i] + ' .```',
 											color=0xff0000
 											)
 									await client.get_channel(channel).send(embed=embed, tts=False)
