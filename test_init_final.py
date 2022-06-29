@@ -537,6 +537,9 @@ async def task():
 								await client.get_channel(channel).send("```" + prefixStirng + bossData[i][8] + ' ' + basicSetting[3] + ' minutes' + bossData[i][3] + "[" +  bossTimeString[i] + "]" + '\n<' + bossData[i][6] + '>```', tts=False)
 							else :
 								await client.get_channel(channel).send("```" + prefixStirng + bossData[i][8] + ' ' + basicSetting[3] + ' minutes' + bossData[i][3] + "[" +  bossTimeString[i] + "]```", tts=False)
+							# @everyone 전체공지
+							if int(bossData[i][7]) == 1 :
+								await client.get_channel(channel).send("@everyone " + prefixStirng + bossData[i][8] + ' ' + basicSetting[3] + ' minutes. Please prepare!(準備してください！)', tts=False)
 							#voice:await PlaySound(voice_client1, './sound/' + bossData[i][0] + '알림1.mp3')
 
 				################ before_alert ################
